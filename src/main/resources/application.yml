@@ -1,0 +1,12 @@
+welcome:
+  message: FH Erfurt
+
+spring:
+#  main:
+#    allow-bean-definition-overriding: true
+  messages:
+    encoding: UTF-8
+    basename: classpath:messages
+  thymeleaf:
+    cache: false
+
