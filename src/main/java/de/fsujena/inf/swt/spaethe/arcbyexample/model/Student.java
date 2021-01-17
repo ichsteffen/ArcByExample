@@ -34,4 +34,6 @@ public class Student implements Serializable {
     private Character gender;
 
     private Float percentage;
+
+    private String matrikelnummer = "";
 }
