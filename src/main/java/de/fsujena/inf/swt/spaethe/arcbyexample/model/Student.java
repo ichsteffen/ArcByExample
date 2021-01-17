@@ -1,5 +1,9 @@
 package de.fsujena.inf.swt.spaethe.arcbyexample.model;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 import javax.validation.constraints.Min;
@@ -10,6 +14,9 @@ import javax.validation.constraints.NotNull;
  * Simple student POJO with few fields
  *
  */
+@Data
+@Setter
+@Getter
 public class Student implements Serializable {
 
     private static final long serialVersionUID = -8582553475226281591L;
@@ -25,36 +32,4 @@ public class Student implements Serializable {
     private Character gender;
 
     private Float percentage;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Character getGender() {
-        return gender;
-    }
-
-    public void setGender(Character gender) {
-        this.gender = gender;
-    }
-
-    public Float getPercentage() {
-        return percentage;
-    }
-
-    public void setPercentage(Float percentage) {
-        this.percentage = percentage;
-    }
 }
