@@ -1,19 +1,15 @@
 package de.fsujena.inf.swt.spaethe.arcbyexample.model;
 
-import lombok.*;
-
-import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
-/**
- * 
- * Simple student POJO with few fields
- *
- */
 @Data
 @Entity
 @NoArgsConstructor

@@ -2,6 +2,7 @@ package de.fsujena.inf.swt.spaethe.arcbyexample.restcontroller;
 
 import de.fsujena.inf.swt.spaethe.arcbyexample.model.Student;
 import de.fsujena.inf.swt.spaethe.arcbyexample.persistence.StudentRepository;
+import de.fsujena.inf.swt.spaethe.arcbyexample.restcontroller.dto.StudentDTO;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,10 +25,11 @@ public class StudentRestController {
     }
 
     @GetMapping(path="/student/{id}", produces= MediaType.APPLICATION_JSON_VALUE)
-    public Student getStudentById(@PathVariable Integer id, HttpServletResponse response) {
+    public StudentDTO getStudentById(@PathVariable Integer id, HttpServletResponse response) {
         Optional<Student> student = studentRepository.findById(id);
         if (student.isPresent()) {
-            return student.get();
+            StudentDTO studentDTO = StudentDTO.fromModel(student.get());
+            return studentDTO;
         } else {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return null;
