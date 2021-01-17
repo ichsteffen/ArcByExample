@@ -6,7 +6,8 @@ spring:
 #    allow-bean-definition-overriding: true
   messages:
     encoding: UTF-8
-    basename: classpath:messages
+    basename: messages
   thymeleaf:
     cache: false
 
+debug: true
