@@ -1,8 +1,8 @@
-package de.fsujena.inf.swt.spaethe.arcbyexample.restcontroller;
+package de.fsujena.inf.swt.spaethe.arcbyexample.front.rest;
 
 import de.fsujena.inf.swt.spaethe.arcbyexample.domain.Student;
 import de.fsujena.inf.swt.spaethe.arcbyexample.domain.StudentPersistence;
-import de.fsujena.inf.swt.spaethe.arcbyexample.restcontroller.dto.StudentDTO;
+import de.fsujena.inf.swt.spaethe.arcbyexample.front.rest.dto.StudentDTO;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 

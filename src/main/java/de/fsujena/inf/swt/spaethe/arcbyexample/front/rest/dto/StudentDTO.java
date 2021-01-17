@@ -1,4 +1,4 @@
-package de.fsujena.inf.swt.spaethe.arcbyexample.restcontroller.dto;
+package de.fsujena.inf.swt.spaethe.arcbyexample.front.rest.dto;
 
 import lombok.Builder;
 import lombok.Getter;

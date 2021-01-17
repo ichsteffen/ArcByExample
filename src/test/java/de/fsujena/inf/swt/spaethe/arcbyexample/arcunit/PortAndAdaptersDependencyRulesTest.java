@@ -12,14 +12,14 @@ public class PortAndAdaptersDependencyRulesTest {
     // 'access' catches only violations by real accesses, i.e. accessing a field, calling a method; compare 'dependOn' further down
 
     @ArchTest
-    static final ArchRule controller_should_not_access_persistence =
-            noClasses().that().resideInAPackage("..controller..")
+    static final ArchRule front_should_not_access_persistence =
+            noClasses().that().resideInAPackage("..front..")
                     .should().accessClassesThat().resideInAPackage("..persistence..");
 
     @ArchTest
-    static final ArchRule restservices_should_not_access_controllers =
-            noClasses().that().resideInAPackage("..restcontroller..")
-                    .should().accessClassesThat().resideInAPackage("..persistence..");
+    static final ArchRule rest_should_not_access_html =
+            noClasses().that().resideInAPackage("..front.rest..")
+                    .should().accessClassesThat().resideInAPackage("..front.html..");
 
     @ArchTest
     static final ArchRule persistence_should_not_access_controller =

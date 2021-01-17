@@ -1,4 +1,4 @@
-package de.fsujena.inf.swt.spaethe.arcbyexample.controller;
+package de.fsujena.inf.swt.spaethe.arcbyexample.front.html;
 
 import de.fsujena.inf.swt.spaethe.arcbyexample.domain.Bewertungsstrategie;
 import de.fsujena.inf.swt.spaethe.arcbyexample.domain.Student;
