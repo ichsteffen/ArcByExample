@@ -11,7 +11,7 @@ public class StudentDTO {
     private Character gender;
     private Float percentage;
 
-    static public StudentDTO fromModel(de.fsujena.inf.swt.spaethe.arcbyexample.model.Student student) {
+    static public StudentDTO fromModel(de.fsujena.inf.swt.spaethe.arcbyexample.domain.Student student) {
         return new StudentDTOBuilder()
                 .id(student.getId())
                 .name(student.getName())

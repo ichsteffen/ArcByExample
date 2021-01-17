@@ -1,17 +1,17 @@
-package de.fsujena.inf.swt.spaethe.arcbyexample.model;
+package de.fsujena.inf.swt.spaethe.arcbyexample.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.time.Instant;
 
 @Data
-@Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Student implements Serializable {
@@ -20,7 +20,6 @@ public class Student implements Serializable {
 
     @NotNull(message = "Student ID is required.")
     @Min(value = 1000, message = "Student ID must be at least 4 digits.")
-    @Id
     private Integer id;
 
     @NotNull(message = "Student name is required.")
@@ -32,6 +31,8 @@ public class Student implements Serializable {
     private Float percentage;
 
     private String matrikelnummer = "";
+
+    private Instant geburtstag;
 
     public String getBewertung() {
         if (percentage > 90.0) {

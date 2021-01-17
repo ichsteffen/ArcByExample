@@ -1,4 +1,4 @@
-package de.fsujena.inf.swt.spaethe.arcbyexample.model;
+package de.fsujena.inf.swt.spaethe.arcbyexample.domain;
 
 import org.junit.jupiter.api.Test;
 

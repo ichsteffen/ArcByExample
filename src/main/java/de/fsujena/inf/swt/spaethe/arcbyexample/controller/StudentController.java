@@ -1,8 +1,8 @@
 package de.fsujena.inf.swt.spaethe.arcbyexample.controller;
 
-import de.fsujena.inf.swt.spaethe.arcbyexample.model.Bewertungsstrategie;
-import de.fsujena.inf.swt.spaethe.arcbyexample.model.Student;
-import de.fsujena.inf.swt.spaethe.arcbyexample.persistence.StudentRepository;
+import de.fsujena.inf.swt.spaethe.arcbyexample.domain.Bewertungsstrategie;
+import de.fsujena.inf.swt.spaethe.arcbyexample.domain.Student;
+import de.fsujena.inf.swt.spaethe.arcbyexample.domain.StudentPersistence;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,13 +19,13 @@ import javax.validation.Valid;
 @Controller
 public class StudentController {
 
-    StudentRepository studentRepository;
+    StudentPersistence studentRepository;
 
     Bewertungsstrategie bewertungsstrategie;
 
     // Konstruktor basierte Dependency Injection
     public StudentController(
-            StudentRepository studentRepository,
+            StudentPersistence studentRepository,
             Bewertungsstrategie bewertungsstrategie
     ) {
         this.studentRepository = studentRepository;
