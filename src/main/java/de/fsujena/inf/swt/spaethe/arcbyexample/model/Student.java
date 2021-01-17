@@ -32,4 +32,18 @@ public class Student implements Serializable {
     private Float percentage;
 
     private String matrikelnummer = "";
+
+    public String getBewertung() {
+        if (percentage > 90.0) {
+            return "sehr gut";
+        } else
+        if (percentage > 80.0) {
+            return "gut";
+        } else
+        if (percentage > 60.0) {
+            return "befriedigend";
+        } else {
+            return "ungenügend";
+        }
+    }
 }
